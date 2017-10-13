@@ -18,6 +18,7 @@ defmodule ReservationBookWeb.Router do
 
     resources "/users", UserController
     resources "/rooms", RoomController
+    get "/dashboard", DashboardController, :index
     get "/", PageController, :index
   end
 
