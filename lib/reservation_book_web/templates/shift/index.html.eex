@@ -1,0 +1,31 @@
+<h2>Listing Shifts</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Day of week</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Sites reserved</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for shift <- @shifts do %>
+    <tr>
+      <td><%= shift.day_of_week %></td>
+      <td><%= shift.start_time %></td>
+      <td><%= shift.end_time %></td>
+      <td><%= shift.sites_reserved %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: shift_path(@conn, :show, shift), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: shift_path(@conn, :edit, shift), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: shift_path(@conn, :delete, shift), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+<h2>Show Shift</h2>
+
+<ul>
+
+  <li>
+    <strong>Day of week:</strong>
+    <%= @shift.day_of_week %>
+  </li>
+
+  <li>
+    <strong>Start time:</strong>
+    <%= @shift.start_time %>
+  </li>
+
+  <li>
+    <strong>End time:</strong>
+    <%= @shift.end_time %>
+  </li>
+
+  <li>
+    <strong>Sites reserved:</strong>
+    <%= @shift.sites_reserved %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: shift_path(@conn, :edit, @shift) %></span>
+<span><%= link "Back", to: shift_path(@conn, :index) %></span>

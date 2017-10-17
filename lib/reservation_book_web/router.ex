@@ -17,7 +17,10 @@ defmodule ReservationBookWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     resources "/users", UserController
-    resources "/rooms", RoomController
+    resources "/rooms", RoomController do
+      resources "/shifts", ShiftController, only: [:index, :create, :update, :new]
+    end
+    resources "/shifts", ShiftController, except: [:create, :update, :new]
     get "/dashboard", DashboardController, :index
     get "/", PageController, :index
   end

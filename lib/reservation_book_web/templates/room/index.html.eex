@@ -3,7 +3,7 @@
   <%= for room <- @rooms do %>
     <div class="list-group-item">
       <div class="list-view-pf-actions">
-        <%= button "Show", to: room_path(@conn, :show, room), class: "btn btn-default" %>
+        <%= link "Show", to: room_path(@conn, :show, room), class: "btn btn-default" %>
         <div class="dropdown pull-right dropdown-kebab-pf">
           <button class="btn btn-link dropdown-toggle" type="button" id="dropdownKebabRight9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <span class="fa fa-ellipsis-v"></span>
