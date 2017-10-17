@@ -83,6 +83,11 @@
         <%= link "Users", to: "/users" %>
         <%# end %>
       </li>
+            <li>
+        <%# if user_signed_in? %>
+        <%= link "Shifts", to: "/shifts" %>
+        <%# end %>
+      </li>
       <li>
         <%# if user_signed_in? %>
         <%= link "Dashboard", to: "/dashboard" %>
